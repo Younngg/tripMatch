@@ -19,7 +19,7 @@ import {
 } from "../../../components/Auth/validation";
 
 const RegisterForm = () => {
-  const baseUrl = "http://kdt-sw3-team08.elicecoding.com:3003";
+  const baseUrl = "http://localhost:3003";
 
   const AgeOption = [
     { value: "default", name: "선택" },

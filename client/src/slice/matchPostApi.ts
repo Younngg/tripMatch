@@ -7,7 +7,7 @@ export const matchPostApi = createApi({
   reducerPath: "matchPostApi",
   tagTypes: ["FreePost", "MatchPost", "SearchPost"],
   baseQuery: authAxiosBaseQuery({
-    baseUrl: "http://kdt-sw3-team08.elicecoding.com:3003/api/",
+    baseUrl: "http://localhost:3003/api/",
   }),
   endpoints: (builder) => ({
     // 전체 동행게시글을 불러옴

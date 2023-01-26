@@ -8,7 +8,7 @@ type TProfileModal = {
   email: string;
 };
 
-const baseUrl = "http://kdt-sw3-team08.elicecoding.com:3003";
+const baseUrl = "http://localhost:3003";
 // 요청 실패시 보일 기본 이미지
 const defaultImgUrl = defaultImage;
 
