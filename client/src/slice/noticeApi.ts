@@ -23,7 +23,7 @@ export const noticeApi = createApi({
           method: "get",
         };
       },
-      providesTags: (result, error, arg) =>
+      providesTags: (result) =>
         result
           ? [
               "Notice",
