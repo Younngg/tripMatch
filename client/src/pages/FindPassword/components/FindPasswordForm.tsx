@@ -10,8 +10,6 @@ import {
 import axios from "axios";
 
 const FindPasswordForm = () => {
-  const baseUrl = "http://localhost:3003";
-  // const loginUrl = `${baseUrl}/main/auth/login`;
   const [email, setEmail] = useState("");
   const [validText, setValidText] = useState(
     "새 비밀번호를 받을 이메일 주소를 입력해주세요",
@@ -42,7 +40,7 @@ const FindPasswordForm = () => {
     setValidText(checkResult);
     try {
       const sendOj = { email: email };
-      const res = await axios.post(`${baseUrl}/api/main/auth/password`, sendOj);
+      const res = await axios.post(`api/main/auth/password`, sendOj);
       if (res.status === 200) {
         alert(
           "입력하신 이메일로 비밀번호가 전송되었습니다. 이메일을 확인해주세요",

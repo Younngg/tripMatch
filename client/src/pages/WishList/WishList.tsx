@@ -6,8 +6,6 @@ import WishTab from "./components/WishTab";
 import authAxios from "../../axios/authAxios";
 import NotFound from "../../components/NotFound/NotFound";
 
-// const baseUrl = "http://localhost:3003";
-
 const WishList = () => {
   const [dataList, setDataList] = useState();
   const [errorList, serErrorList] = useState(true);

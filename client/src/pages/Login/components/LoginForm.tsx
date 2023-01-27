@@ -10,8 +10,6 @@ import { useImmer } from "use-immer";
 import axios from "axios";
 
 const LoginForm = () => {
-  const baseUrl = "http://localhost:3003";
-  // const loginUrl = `${baseUrl}/main/auth/login`;
   const navigate = useNavigate();
 
   const [userState, setUserState] = useImmer({
@@ -34,7 +32,7 @@ const LoginForm = () => {
   const onSubmitLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${baseUrl}/api/main/auth/login`, {
+      const res = await axios.post(`api/main/auth/login`, {
         email: userState.email,
         password: userState.password,
       });

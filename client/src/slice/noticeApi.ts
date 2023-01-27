@@ -6,7 +6,8 @@ export const noticeApi = createApi({
   reducerPath: "noticeApi",
   tagTypes: ["Notice"],
   baseQuery: authAxiosBaseQuery({
-    baseUrl: "http://localhost:3003/api/",
+    baseUrl:
+      "https://port-0-tripmatch-1jx7m2gldef0u0j.gksl2.cloudtype.app/api/",
   }),
   endpoints: (builder) => ({
     // 전체 동행게시글을 불러옴

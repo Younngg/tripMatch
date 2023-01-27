@@ -8,7 +8,6 @@ type TProfileModal = {
   email: string;
 };
 
-const baseUrl = "http://localhost:3003";
 // 요청 실패시 보일 기본 이미지
 const defaultImgUrl = defaultImage;
 
@@ -28,7 +27,7 @@ const ProfileModal: React.FC<TProfileModal> = ({ email }) => {
   useEffect(() => {
     const callProfile = async () => {
       try {
-        const res = await axios.get(`${baseUrl}/api/main/auth/${email}`);
+        const res = await axios.get(`api/main/auth/${email}`);
         if (res.status === 200) {
           setUserData((draft) => {
             draft.email = res.data.email;

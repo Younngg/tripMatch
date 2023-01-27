@@ -1,12 +1,13 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import type { CommentType } from "../type/comment";
-import { authAxiosBaseQuery, axiosBaseQuery } from "./axiosBaseQuery";
+import { authAxiosBaseQuery } from "./axiosBaseQuery";
 
 export const commentApi = createApi({
   reducerPath: "commentApi",
   tagTypes: ["Comment"],
   baseQuery: authAxiosBaseQuery({
-    baseUrl: "http://localhost:3003/api/",
+    baseUrl:
+      "https://port-0-tripmatch-1jx7m2gldef0u0j.gksl2.cloudtype.app/api/",
   }),
   endpoints: (builder) => ({
     // id에 해당하는 댓글을 업데이트

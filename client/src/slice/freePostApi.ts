@@ -7,7 +7,8 @@ export const freePostApi = createApi({
   reducerPath: "freePostApi",
   tagTypes: ["FreePost", "MatchPost", "SearchPost"],
   baseQuery: authAxiosBaseQuery({
-    baseUrl: "http://localhost:3003/api/",
+    baseUrl:
+      "https://port-0-tripmatch-1jx7m2gldef0u0j.gksl2.cloudtype.app/api/",
   }),
   endpoints: (builder) => ({
     // 전체 자유게시글을 불러옴
@@ -25,7 +26,7 @@ export const freePostApi = createApi({
           params: { page, region, perPage, keyword },
         };
       },
-      providesTags: (result, error, arg) =>
+      providesTags: (result) =>
         result
           ? [
               "FreePost",

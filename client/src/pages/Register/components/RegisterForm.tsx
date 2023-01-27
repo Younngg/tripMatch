@@ -19,8 +19,6 @@ import {
 } from "../../../components/Auth/validation";
 
 const RegisterForm = () => {
-  const baseUrl = "http://localhost:3003";
-
   const AgeOption = [
     { value: "default", name: "선택" },
     { value: "10대", name: "10대" },
@@ -102,7 +100,7 @@ const RegisterForm = () => {
         setUserState((draft) => {
           draft.reqAuthNumber = true;
         });
-        const res = await axios.post(`${baseUrl}/api/main/auth/email`, {
+        const res = await axios.post(`api/main/auth/email`, {
           email: userState.email,
         });
         if (res.status === 201) {
@@ -170,7 +168,7 @@ const RegisterForm = () => {
         setUserState((draft) => {
           draft.checkAuthNumberAxios = true;
         });
-        const res = await axios.post(`${baseUrl}/api/main/auth/certify`, {
+        const res = await axios.post(`api/main/auth/certify`, {
           email: userState.email,
           authNumber: userState.authNumber,
         });
@@ -300,7 +298,7 @@ const RegisterForm = () => {
     };
 
     if (userState.certified === true) {
-      const res = await axios.post(`${baseUrl}/api/main/auth/join`, userData);
+      const res = await axios.post(`api/main/auth/join`, userData);
       if (res.status === 201) {
         navigate("/auth/login");
       } else if (res.status === 403) {
