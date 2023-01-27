@@ -1,8 +1,7 @@
 # Trip Match
 
 - 믿을 수 있는 여행 동행자를 구하는 사이트
-- [링크](http://kdt-sw3-team08.elicecoding.com/) <br>
-  ![QR](https://res.cloudinary.com/dnow6qfd8/image/upload/v1672332941/qr_lpuiw1.png)
+- [링크](https://web-trip-match-1jx7m2gldef0u0j.gksl2.cloudtype.app/) <br>
 
   프로젝트 회고 : https://velog.io/@younngg1012/4xocf28f
 
@@ -220,22 +219,26 @@ https://user-images.githubusercontent.com/102281327/210049115-1b05a2d7-9bfa-48df
 ## 6. 실행 방법
 
 - 스웨거:
+
   1. localhost
+
   ```
-    git clone https://kdt-gitlab.elice.io/sw_track/class_03/web_project_2/team8/team82.git
+    git clone https://github.com/Younngg/tripMatch.git
     cd team82/server
     npm install
     npm run dev 혹은 npm run start
-    브라우저에서 localhost:3003/api-docs 접속
-    Swagger 문서에서 API 선택하여 Try it out
-    Request 양식 채워서 Execute
+    //브라우저에서 localhost:3003/api-docs 접속
+    //Swagger 문서에서 API 선택하여 Try it out
+    //Request 양식 채워서 Execute
+
+    cd ../client
+    yarn && yarn start
   ```
-  2. server
+
+  2. server API 문서
+
   ```
-    브라우저에서 kdt-sw3-team08.elicecoding.com:3003/api-docs 접속
-    Swagger 문서의 Servers 탭을 http://34.64.156.80:3003/api로 변경
-    API 선택하여 Try it out
-    Request 양식 채워서 Execute
+    브라우저에서 https://port-0-tripmatch-1jx7m2gldef0u0j.gksl2.cloudtype.app/api-docs/ 접속
   ```
 
 ## 7. 버전
