@@ -1,4 +1,4 @@
-import { BaseQueryFn, fetchBaseQuery } from "@reduxjs/toolkit/dist/query";
+import { BaseQueryFn } from "@reduxjs/toolkit/dist/query";
 import axios, { AxiosError, AxiosRequestConfig } from "axios";
 import authAxios from "../axios/authAxios";
 
