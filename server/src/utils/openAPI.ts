@@ -1,24 +1,25 @@
-import request from "request";
-import "dotenv/config";
-import { Festival, Stay } from "../interfaces";
+import request from 'request';
+import 'dotenv/config';
+import { Festival, Stay } from '../interfaces';
 
 export default function openAPI(eventStartDate?: string): Promise<[]> {
   return new Promise((res, rej) => {
     request(
       {
-        uri: `http://apis.data.go.kr/B551011/KorService/${
-          eventStartDate ? "searchFestival" : "searchStay"
+        uri: `http://apis.data.go.kr/B551011/KorService1/${
+          eventStartDate ? 'searchFestival1' : 'searchStay1'
         }?numOfRows=20&MobileOS=ETC&MobileApp=AppTest&serviceKey=${
           process.env.SERVICE_KEY
         }&_type=json&arrange=${
-          eventStartDate ? "C&eventStartDate=" + eventStartDate : "R"
+          eventStartDate ? 'C&eventStartDate=' + eventStartDate : 'R'
         }`,
-        method: "GET",
+        method: 'GET',
         json: true,
       },
       (error: any, response: request.Response) => {
         if (error) rej(error);
-        else
+        else {
+          console.log(response.body);
           res(
             response.body.response.body.items.item.map(
               eventStartDate
@@ -39,6 +40,7 @@ export default function openAPI(eventStartDate?: string): Promise<[]> {
                   })
             )
           );
+        }
       }
     );
   });
